@@ -10,7 +10,7 @@
     <router-link to='/city'>
     <div class="header-right">
       <a href="" class="mp-linkarea">
-        <span class="mp-nav-city">{{this.city}}
+        <span class="mp-nav-city">{{this.$store.state.city}}
         <i class="arrow-icon iconfont ">&#xe64a;</i>
         </span>
       </a>
@@ -22,9 +22,6 @@
 <script>
 export default {
   name: 'HomeHeader',
-  props:{
-    city:String
-  }
   }
 </script>
 
