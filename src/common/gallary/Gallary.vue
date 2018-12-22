@@ -1,46 +1,43 @@
 <template>
-  <div class="container" @click="handleGallaryClick">
-    <div class="wrapper">
+<div class="container" @click="handleGallaryClick">
+ <div class="wrapper">
       <swiper :options="swiperOptions">
-        <swiper-slide
-          v-for="(item, index) in imgs"
-          :key="index"
-        >
-          <img class="gallary-img" :src="item" />
+        <swiper-slide v-for="(item,index) in imgs" :key="index">
+          <img class="gallary-img" :src="item"/>
         </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
-export default {
-  name: 'CommonGallary',
-  props: {
-    imgs: {
-      type: Array,
-      default () {
-        return []
+export default{
+  name:'CommonGallary',
+  props:{
+    imgs:{
+      type:Array,
+      default(){
+        return[]
       }
     }
   },
-  data () {
-    return {
-      swiperOptions: {
-        pagination: '.swiper-pagination',
-        paginationType: 'fraction',
-        observeParents: true,
-        observer: true
+  data(){
+    return{
+      swiperOptions:{
+        pagination:'.swiper-pagination',
+        paginationType:'fraction',
+        obserParents:true,
+        observer:true
       }
     }
   },
   methods: {
-    handleGallaryClick () {
+    handleGallaryClick(){
       this.$emit('close')
     }
-  }
+  },
 }
+
 </script>
 
 <style lang="stylus" scoped>

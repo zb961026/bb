@@ -51,7 +51,6 @@
     width:375px;
     height:3.7rem;
     left:0;
-    border-bottom:1px solid red;
   .mpw-swipe-wrap
    width:750px;
    position:relative;
